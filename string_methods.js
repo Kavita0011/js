@@ -1,0 +1,11 @@
+let a="javascript is the most popular language";
+console.log(a.length);
+console.log(a.slice(18,23));
+console.log(a.substr(18,4));
+console.log(a.replace("most","least"));
+console.log(a);
+console.log(a.replaceAll("t","th"));
+cust_name="kavita bisht";
+console.log(cust_name.length);
+console.log(a.charAt(7));
+console.log(cust_name.padStart(17,"Dear "));
