@@ -33,19 +33,18 @@
         const d_o_b_year=d_o_b.getFullYear();
         const agey=current_year-d_o_b_year; 
         const age=current_date-d_o_b; 
-console.log(current_date);
-console.log(d_o_b_year);
-console.log(name);
- if(age >= 18)    
+        console.log(current_date);
+        console.log(d_o_b_year);
+        console.log(name);
+        if(age >= 18)    
         {
             result= "Dear "+name+",your age is "+agey+" you are eligible for voting";
         }
         else{
             result="Dear "+name+",your age is "+agey+" you are not eligible for voting"; 
             } 
-        
-        document.getElementById('result').innerHTML = result ;
-            }
+            document.getElementById('result').innerHTML = result ;
+        }
        </script>
        <button type="button" onclick="voting('Shweta','2005-03-08')">see date</button>
        <button type="button" onclick="document.getElementById('result').style.cssText='color:green;font-size:40px;'">see date</button>

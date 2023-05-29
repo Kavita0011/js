@@ -1,0 +1,12 @@
+
+    .container{
+        width:100%;
+        text-align: center;
+        padding:50px;
+        background-color: rgb(199, 240, 250);
+    }
+    #result{
+        width:80%;
+        text-align: center;
+        background-color: rgb(140, 222, 243);
+    }

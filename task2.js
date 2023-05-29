@@ -1,17 +1,16 @@
 var fruitsDb=["apple","banana","orange","pineapple","grapes","avacado","strawberry"];
 var mixedFruitArr=["grapes","cabage","tomato","banana"];
 function filterfruits(fruitsDb,mixedFruitArr){
-    var filtered_fruits=[];
-    var Dblen=fruitsDb.length;
-    var len=mixedFruitArr.length;
-    for(let i=0;i<Dblen;i++){
+    var filtered_fruits=[]; 
+    for(let fruitsDb_element of fruitsDb){
         // console.log(fruitsDb[i]);
-        for(let j=0;j<len;j++){
+        for(let mixedFruitArr_element of mixedFruitArr)
+        {
             // console.log(mixedFruitArr[j]);
-            if(fruitsDb[i]===mixedFruitArr[j])
+            if(fruitsDb_element===mixedFruitArr_element)
                 {
-                filtered_fruits.push(fruitsDb[i]);
-                console.log(fruitsDb[i]);
+                filtered_fruits.push(fruitsDb_element);
+                console.log(fruitsDb_element);
                 }    
         }
     }

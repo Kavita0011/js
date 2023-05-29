@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="task_styles.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+       <div class="container">
+        <div><script>
+            var empList=[{
+                name:'John Doe',
+                dept:'php',
+                empId:5
+            },{
+                name:'Paul Smith',
+                dept:'MERN',
+                empId:4
+            },{
+                name:'Tom Smith',
+                dept:'SEO',
+                empId:7
+            }];
+            
+            for (let outer = 0; outer < empList.length; outer++) {
+                for (let inner = 0; inner < empList.length; inner++) {
+                    if(empList[outer].empId < empList[inner].empId){
+                        var temp=empList[outer].empId;
+                        empList[outer].empId=empList[inner].empId;
+                        empList[inner].empId=temp;
+                    }
+                }
+            }
+          // let result=JSON.stringify(empList);
+            //document.getElementById('result').innerHTML=result;
+            document.write(JSON.stringify(empList));            
+        </script></div>
+        <div id="result">
+
+        </div>
+       </div>
+    </body>
+</html>
