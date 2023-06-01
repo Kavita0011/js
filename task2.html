@@ -4,50 +4,34 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="task_styles.css">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-       <div class="container">
-        <h1>Task 2</h1>
-        <div class="result">
+  <link rel="stylesheet" href="task_styles.css" />
+</head>
 
-        </div>
-        <script>
-            var fruitsDb=["apple","banana","orange","pineapple","grapes","avacado","strawberry"];
-var mixedFruitArr=["grapes","cabage","tomato","banana"];
-document.write(" fruitsDb array is :"+fruitsDb);
-document.write("<br> mixedFruitsArr array is :"+mixedFruitArr);
+<body>
 
-function filterfruits(fruitsDb,mixedFruitArr){
-    var filtered_fruits=[]; 
-    for(let fruitsDb_element of fruitsDb){
-        // console.log(fruitsDb[i]);
-        for(let mixedFruitArr_element of mixedFruitArr)
-        {
-            // console.log(mixedFruitArr[j]);
-            if(fruitsDb_element===mixedFruitArr_element)
-                {
-                filtered_fruits.push(fruitsDb_element);
-             
-                }    
-        }
-    }
-    document.write("<br> filtered array is : "+filtered_fruits);
-}
-filterfruits(fruitsDb,mixedFruitArr);
-        </script>
-       </div>
-    </body>
+  <!-- task 1 of js -->
+
+  <!-- container class start -->
+  <div class="container">
+
+    <h1>Task 2 of Javascript</h1>
+    <!-- inner container just for formatting of result-->
+    <div class="inner_container">
+      <!-- To show result on this div -->
+      <div id="result"></div>
+
+    </div>
+  </div>
+  <!-- js script link -->
+  <script src="task2.js"></script>
+</body>
+
 </html>

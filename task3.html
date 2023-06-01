@@ -2,85 +2,43 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    .container{
-        width:100%;
-        text-align: center;
-        padding:50px;
-        background-color: rgb(199, 240, 250);
-    }
-    .result{
-        width:80%;
-        text-align: center;
-        background-color: rgb(140, 222, 243);
-    }
-</style>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        
-       <div class="container">
-        <div>        <script>
-            function date_diffrence(date1, date2) {
-                diffrence_seconds=Math.abs((date1-date2)/1000);
-               // document.write(diffrence_seconds);
-               //console.log("the result is : "+month*diffrence_month);
-               //console.log("the result is : "+year*diffrence_year);
-               const year=Math.floor(365*24*60*60);
-               const day=Math.floor(1*24*60*60);   
-               const month=Math.floor(30.4167*24*60*60);
-               // calculating years
-                
-               let diffrence_year=Math.floor((diffrence_seconds)/year);
-               // console.log("diffrence year : "+diffrence_year);
-               
-               let diffrence_month=Math.floor((diffrence_seconds-(year*diffrence_year))/month);
-               // console.log("diffrence month : "+diffrence_month);
-               
-               let diffrence_day=Math.floor((diffrence_seconds-(month*diffrence_month)-(year*diffrence_year))/day);
-               // console.log("diffrence day : "+diffrence_day );
-               if(diffrence_year!==0){
-                 result1=`${diffrence_year} year, ${diffrence_month} months , ${diffrence_day} days `;        
-                   }
-                   else
-                   {
-                 result1=` ${diffrence_month} months ,${diffrence_day} days `;
-                   }
-                console.log(result1);
-                document.write("the result is : "+ result1);
-           }
-           let dates_query_string=window.location.search;
-           console.log(dates_query_string);
-           let url_parameters=new URLSearchParams(dates_query_string);
-           let date_1=url_parameters.get('date1');
-           let date_2=url_parameters.get('date2');
-           let date1 = new Date(date_1);
-           let date2 = new Date(date_2);
-           date_diffrence(date1,date2);
-        
-           
-        </script></div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="task_styles.css">
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <h1>Task3 of Javascript </h1>
         <div>
             <form action="" method="get">
-                <input type="date" name="date1">
-                <br>
-                <input type="date" name="date2">
-            <br>
-            <button type="submit">calculate diffrence</button>
+                <div>
+                    <input type="date" name="date1" required>
+                    <br>
+                </div>
+                <div> <input type="date" name="date2" required>
+                    <br>
+                </div>
+                <button type="submit">Calculate diffrence</button>
             </form>
+
         </div>
-        <div class="result">
-</div></div>
-      
-    </body>
+        <div class="inner_container">
+            <div id="result" class="result">
+            </div>
+        </div>
+    </div>
+    <script src="task3.js"></script>
+</body>
+
 </html>

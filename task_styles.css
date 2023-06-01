@@ -1,12 +1,47 @@
-
+div{
+    padding:20px; 
+    margin-bottom:30px;
+}
     .container{
         width:100%;
         text-align: center;
-        padding:50px;
-        background-color: rgb(199, 240, 250);
+        padding:20px; 
+        background-color: rgb(6, 86, 160);
+        box-sizing:border-box;
+    }
+    .inner_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
     }
     #result{
-        width:80%;
-        text-align: center;
-        background-color: rgb(140, 222, 243);
+        border-radius: 8px;
+        text-align:left;
+        background-color: rgb(207, 216, 241);
+        font-size:25px;
+        padding:15px;
+        width:340px;
+    }
+    h1{
+        color:white;
+        font-size: 40px;
+    }
+    input{
+        border-radius: 8px;
+        height: 35px;
+        width:350px;
+        background-color: rgb(207, 216, 241);
+    }
+    button{
+        padding:10px;
+        border-radius: 8px;
+        font-size: 28px;
+        background-color:rgb(48, 46, 165);
+        color:white;
+    }
+    .image{
+        width:100px;
+        height:100px;
     }

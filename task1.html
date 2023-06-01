@@ -3,61 +3,35 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="task_styles.css">
-    </head>
-    <body>
 
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-       <div class="container">
-        <h1>Task 1</h1>
-        <div id="result">
-        </div>
-     
-       <script>    
-    let ar1,ar2;
-    let ar3=[],ar4=[];
-    sum=0;
-    ar1=[1,3,6,2,4];
-    ar2=[2,0,4,1,2];
-    len=ar1.length;
-    function merge_and_filter(ar1,ar2){
-     for (let index = 0; index < len; index++) {
-         sum =ar1[index]+ar2[index];
-         ar3.push(sum);
-     }
-   
-    
-    document.write( " array1 is ", ar1);
-    document.write( "<br> array2 is ", ar2);
-    document.write( "<br> array3 is ", ar3);
-    
-    
-    
-    for (let outer = 0; outer < len; outer++) {
-    for (let inner = 0; inner < len; inner++) {
-    if( ar3[outer]>=ar3[inner]){
-    let temp=ar3[outer];
-      ar3[outer]=ar3[inner];
-      ar3[inner]=temp;
-     }}}
-    for (let filter = 0; filter < len; filter++) {
-     if(ar3[filter] !==ar3[filter+1]){
-      ar4.push(ar3[filter]);
-    }}
-    document.write(" <br> array 4 is ",ar4);
-    }
-    merge_and_filter(ar1,ar2);    
-    </script>    
-    
-</div>    
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title></title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="task_styles.css" />
+</head>
+
+<body>
+
+  <!-- task 1 of js -->
+
+  <!-- container class start -->
+  <div class="container">
+
+    <h1>Task 1 of Javascript</h1>
+    <!-- inner container just for formatting of result-->
+    <div class="inner_container">
+      <!-- To show result on this div -->
+      <div id="result"></div>
+
+    </div>
+  </div>
+  <!-- js script link -->
+  <script src="task1.js"></script>
 </body>
+
 </html>

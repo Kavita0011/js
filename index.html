@@ -16,36 +16,36 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        
+        <script>
        
+            function voting(u_name,dob){
+            name=u_name;
+            console.log(dob);
+            const current_date=new Date();
+            const current_year=current_date.getFullYear();
+            const d_o_b=new Date(dob);
+            const d_o_b_year=d_o_b.getFullYear();
+            const agey=current_year-d_o_b_year; 
+            const age=current_date-d_o_b; 
+            console.log(current_date);
+            console.log(d_o_b_year);
+            console.log(name);
+            if(age >= 18)    
+            {
+                result= "Dear "+name+",your age is "+agey+" you are eligible for voting";
+            }
+            else{
+                result="Dear "+name+",your age is "+agey+" you are not eligible for voting"; 
+                } 
+                document.getElementById('result').innerHTML = result ;
+            }
+           </script>
         <h1>voting eligilbilty</h1>
   
         <p id="result">see reult here</p>
       
-       
-        <script>
-       
-        function voting(u_name,dob){
-        name=u_name;
-        console.log(dob);
-        const current_date=new Date();
-        const current_year=current_date.getFullYear();
-        const d_o_b=new Date(dob);
-        const d_o_b_year=d_o_b.getFullYear();
-        const agey=current_year-d_o_b_year; 
-        const age=current_date-d_o_b; 
-        console.log(current_date);
-        console.log(d_o_b_year);
-        console.log(name);
-        if(age >= 18)    
-        {
-            result= "Dear "+name+",your age is "+agey+" you are eligible for voting";
-        }
-        else{
-            result="Dear "+name+",your age is "+agey+" you are not eligible for voting"; 
-            } 
-            document.getElementById('result').innerHTML = result ;
-        }
-       </script>
+      
        <button type="button" onclick="voting('Shweta','2005-03-08')">see date</button>
        <button type="button" onclick="document.getElementById('result').style.cssText='color:green;font-size:40px;'">see date</button>
 
